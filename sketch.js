@@ -33,7 +33,7 @@ function setup() {
 
 	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:3, isStatic:true});
 	World.add(world, packageBody);
-	Matter.Body.setStatic(packageBody,false);
+	
 	packageBody.restitution = 0.6;
 	
 
@@ -61,6 +61,7 @@ function keyPressed() {
 	// Look at the hints in the document and understand how to make the package body fall only on
 	packageSprite.x = packageBody.position.x
 	packageSprite.y = packageBody.position.y
+	 Matter.Body.setStatic(packageBody,false);
     
   }
 }
